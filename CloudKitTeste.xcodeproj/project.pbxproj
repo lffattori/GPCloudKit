@@ -14,6 +14,9 @@
 		25B1B7BB2435051C0039AC1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25B1B7BA2435051C0039AC1E /* Assets.xcassets */; };
 		25B1B7BE2435051C0039AC1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B1B7BC2435051C0039AC1E /* LaunchScreen.storyboard */; };
 		25B1B7C8243505400039AC1E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B1B7C7243505400039AC1E /* CloudKit.framework */; };
+		25B1B7CC24351C6D0039AC1E /* HandlerSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B1B7CB24351C6D0039AC1E /* HandlerSave.swift */; };
+		25B1B7CE243523AB0039AC1E /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B1B7CD243523AB0039AC1E /* ListTableViewController.swift */; };
+		25B1B7D0243531AB0039AC1E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B1B7CF243531AB0039AC1E /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		25B1B7BF2435051C0039AC1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25B1B7C5243505380039AC1E /* CloudKitTeste.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudKitTeste.entitlements; sourceTree = "<group>"; };
 		25B1B7C7243505400039AC1E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		25B1B7CB24351C6D0039AC1E /* HandlerSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandlerSave.swift; sourceTree = "<group>"; };
+		25B1B7CD243523AB0039AC1E /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		25B1B7CF243531AB0039AC1E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +71,10 @@
 				25B1B7B1243505190039AC1E /* AppDelegate.swift */,
 				25B1B7B3243505190039AC1E /* SceneDelegate.swift */,
 				25B1B7B5243505190039AC1E /* ViewController.swift */,
+				25B1B7CD243523AB0039AC1E /* ListTableViewController.swift */,
 				25B1B7B7243505190039AC1E /* Main.storyboard */,
+				25B1B7CF243531AB0039AC1E /* TableViewCell.swift */,
+				25B1B7CB24351C6D0039AC1E /* HandlerSave.swift */,
 				25B1B7BA2435051C0039AC1E /* Assets.xcassets */,
 				25B1B7BC2435051C0039AC1E /* LaunchScreen.storyboard */,
 				25B1B7BF2435051C0039AC1E /* Info.plist */,
@@ -152,8 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25B1B7CC24351C6D0039AC1E /* HandlerSave.swift in Sources */,
 				25B1B7B6243505190039AC1E /* ViewController.swift in Sources */,
 				25B1B7B2243505190039AC1E /* AppDelegate.swift in Sources */,
+				25B1B7D0243531AB0039AC1E /* TableViewCell.swift in Sources */,
+				25B1B7CE243523AB0039AC1E /* ListTableViewController.swift in Sources */,
 				25B1B7B4243505190039AC1E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
