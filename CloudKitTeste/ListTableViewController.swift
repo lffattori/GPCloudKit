@@ -9,6 +9,7 @@
 import UIKit
 
 class ListTableViewController: UITableViewController {
+    var handler = HandlerSave()
 
     override func viewDidLoad() {
         super.viewDidLoad()

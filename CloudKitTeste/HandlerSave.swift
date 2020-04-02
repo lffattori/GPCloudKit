@@ -14,12 +14,12 @@ class HandlerSave {
     let container = CKContainer.init(identifier: "iCloud.Xuxu")
     lazy var dataBase = container.publicCloudDatabase
     let aluno = CKRecord(recordType: "Aluno")
+    let predicado = NSPredicate(value: true)
 
-    func getAllStudentsName() -> [String] {
+    func getAllStudentsName(completionHandler: @escaping ([String]) -> Void) {
         var nomes = [String]()
-        let namesPredicate = NSPredicate(format: "Nomes")
 
-        let query = CKQuery(recordType: "Aluno", predicate: namesPredicate)
+        let query = CKQuery(recordType: "Aluno", predicate: predicado)
         dataBase.perform(query, inZoneWith: nil) { (records, error) in
             if let error = error {
                 print(error.localizedDescription)
@@ -27,17 +27,15 @@ class HandlerSave {
                 for aluno in records {
                     nomes.append(aluno["Nome"] as! String)
                 }
-                print(nomes)
+                completionHandler(nomes)
             }
         }
-        return nomes
+        return
     }
 
-    func getAllStudentsCourse() -> [String] {
+    func getAllStudentsCourse(completionHandler: @escaping ([String]) -> Void){
         var cursos = [String]()
-        let cursosPredicado = NSPredicate(format: "Curso")
-
-        let query = CKQuery(recordType: "Aluno", predicate: cursosPredicado)
+        let query = CKQuery(recordType: "Aluno", predicate: predicado)
 
         dataBase.perform(query, inZoneWith: nil) { (records, error) in
             if let error = error {
@@ -46,26 +44,27 @@ class HandlerSave {
                 for aluno in records {
                     cursos.append(aluno["Curso"] as! String)
                 }
+                completionHandler(cursos)
             }
         }
-         return cursos
+         return
     }
 
-    func getAllStudentsTIAs() -> [String] {
+    func getAllStudentsTIAs(completionHandler: @escaping ([String]) -> Void) {
         var tias = [String]()
-        let tiasPredicado = NSPredicate(format: "TIA")
 
-        let query = CKQuery(recordType: "Aluno", predicate: tiasPredicado)
+        let query = CKQuery(recordType: "Aluno", predicate: predicado)
 
         dataBase.perform(query, inZoneWith: nil) { (records, error) in
             if let error = error {
                 print(error.localizedDescription)
             } else if let records = records {
                 for aluno in records {
-                    tias.append(aluno["Curso"] as! String)
+                    tias.append(aluno["TIA"] as! String)
                 }
+                completionHandler(tias)
             }
         }
-        return tias
+        return
     }
 }
