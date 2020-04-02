@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CloudKit
 
 class TableViewCell: UITableViewCell {
+     var handler = HandlerSave()
+
     @IBOutlet weak var nome: UILabel!
     @IBOutlet weak var curso: UILabel!
     @IBOutlet weak var TIA: UILabel!
@@ -21,8 +24,8 @@ class TableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
+
 
 }
